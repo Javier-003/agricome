@@ -1,0 +1,53 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3498DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Alinear los botones horizontalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 10px;
+    text-align: center;
+}
+
+.round-button {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* Cambiado a un valor de porcentaje */
+    background-color: #3498DB;
+    color: #000000;
+    /* Se corrigió el valor del color */
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    display: inline-block;
+    line-height: 150px; 
+}
+
+.round-button:hover {
+    background-color: #FFD700;
+    transform: translateY(-5px);
+}
+
+/* navbar */
+.navbar {
+    background-color: transparent !important; /* Hacemos el fondo transparente */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black !important; /* Cambiamos el color del texto a negro */
+    
+}

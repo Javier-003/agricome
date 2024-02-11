@@ -1,0 +1,55 @@
+/* Estilos generales para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+/* Ajustes adicionales para dispositivos pequeños */
+@media only screen and (max-width: 576px) {
+    .table-responsive {
+        display: block;
+        position: relative;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+        border-spacing: 0;
+        
+    }
+
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+        display: block;
+    }
+
+    .table thead th {
+        text-align: left;
+    }
+
+    .table tbody {
+        max-height: calc(100vh - 170px); /* Ajusta la altura máxima según tu diseño */
+        overflow-y: auto;
+        
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+        vertical-align: middle;
+        border: none;
+    }
+
+    .table th {
+        background-color: #f2f2f252; /* Color de fondo para encabezados */
+    }
+
+    .table td {
+        border-bottom: 1px solid #f2f2f252; /* Línea separadora entre filas */
+    }
+}
