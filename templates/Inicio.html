@@ -23,36 +23,64 @@
         <nav class="menu">
             <div>
                 <a href="{{ url_for('Inicio') }}">
-                    <button type="button" class="btn btn-orange">Inicio</button>
+                    <button type="button" class="btn btn-orange" style="color: black; ">Inicio</button>
                 </a>
 
                 <a href="{{ url_for('acercade') }}">
-                    <button type="button" class="btn btn-orange">Acerca de Agricomex</button>
+                    <button type="button" class="btn btn-orange" style="color: black;">Acerca de Agricomex</button>
                 </a>
             </div>
         </nav>
 
     </header>
 
+
     <section class="general">
         <div class="general-1">
-            <!-- TEXTO -->
-            <h2>¿Como llamar a la API?</h2>
-            <p class="Parrafo">¡Bienvenido a Agricomex, tu plataforma integral para información agrícola! Agricomex es una API diseñada para brindar datos detallados y útiles en el ámbito de la agricultura.</p>
+            <h1>¡Bienvenido a la API de Agricomex!</h1>
+            <p>Para acceder a la información agrícola que proporciona nuestra API, sigue estos simples pasos:</p>
+            <ol>
+                <li>
+                    <strong>URL de la API:</strong> La dirección web que necesitas para acceder a la información es <code>https://apiagricomex-530e9e4f2ef7.herokuapp.com/api/</code>.
+                </li>
+                <li>
+                    <strong>¿Qué hace la API?</strong> Esta API proporciona información sobre temas agrícolas, como tiendas, productos y suelos.
+                </li>
+                <li>
+                    <strong>Cómo usarla:</strong> Solo necesitas agregar la extensión correcta a la URL para obtener la información que necesitas. Por ejemplo:
+                    <ul>
+                        <li>Para obtener una lista de tiendas, visita <code>https://apiagricomex-530e9e4f2ef7.herokuapp.com/api/tiendas</code>.</li>
+                        <li>Para obtener información sobre un producto específico, agrega <code>?id=123</code> al final de la URL, donde <code>123</code> es el ID del producto que estás buscando. Por ejemplo, <code>https://apiagricomex-530e9e4f2ef7.herokuapp.com/api/productos?id=123</code>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Formato de la respuesta:</strong> La información que obtendrás de la API estará en un formato especial llamado JSON. Es como una forma estructurada de presentar la información que es fácil de entender para las computadoras.
+                </li>
+            </ol>
+            <p>¡Y eso es todo! Con esta información, puedes usar nuestra API para obtener datos sobre agricultura de manera sencilla. ¡Buena suerte!</p>
         </div>
-
-
+        <div class="container mt-4">
+            <div class="row justify-content-end" style="margin-top: 50px;">
+                <div class="col-md-4 text-center" style="margin-right: 50px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control text-center bg-light border-0" id="api-link" value="https://apiagricomex-530e9e4f2ef7.herokuapp.com/api/" readonly>
+                        <button class="btn btn-outline-secondary" type="button" id="copy-button">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function() {
+            var input = document.getElementById('api-link');
+            input.select();
+            document.execCommand('copy');
+        });
+    </script>
 
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </html>
