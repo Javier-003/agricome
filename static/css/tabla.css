@@ -10,14 +10,14 @@
 @media only screen and (max-width: 576px) {
     .table-responsive {
         display: block;
-        position: relative;
+        overflow-x: auto;
     }
 
     .table {
-        width: 100%;
-        margin-bottom: 0;
+        width: auto; /* Cambiar de 100% a auto */
+        margin-bottom: 15px; /* Ajustar según tus necesidades */
         border-spacing: 0;
-        
+        border-collapse: collapse; /* Añadir para evitar espacios entre celdas */
     }
 
     .table thead,
@@ -25,31 +25,24 @@
     .table th,
     .table td,
     .table tr {
-        display: block;
+        display: table-cell; /* Cambiar de block a table-cell */
+        vertical-align: middle; /* Ajustar según tus necesidades */
     }
 
-    .table thead th {
-        text-align: left;
+    .table thead {
+        font-weight: bold; /* Añadir negrita para encabezados */
+        background-color: #f2f2f252; /* Color de fondo para encabezados */
     }
 
     .table tbody {
         max-height: calc(100vh - 170px); /* Ajusta la altura máxima según tu diseño */
         overflow-y: auto;
-        
     }
 
     .table th,
     .table td {
         padding: 8px;
-        vertical-align: middle;
-        border: none;
-    }
-
-    .table th {
-        background-color: #f2f2f252; /* Color de fondo para encabezados */
-    }
-
-    .table td {
-        border-bottom: 1px solid #f2f2f252; /* Línea separadora entre filas */
+        border: 1px solid #ddd; /* Añadir borde a celdas */
+        border-top: none; /* Eliminar borde superior */
     }
 }
