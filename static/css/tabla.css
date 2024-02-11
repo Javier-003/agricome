@@ -1,16 +1,9 @@
-/* Estilos generales para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    .table-responsive {
-        width: 100%;
-        overflow-x: auto;
-    }
-}
-
 /* Ajustes adicionales para dispositivos pequeños */
 @media only screen and (max-width: 576px) {
     .table-responsive {
         display: block;
         overflow-x: auto;
+        overflow-y: hidden; /* Oculta el desplazamiento vertical */
     }
 
     .table {
@@ -36,7 +29,8 @@
 
     .table tbody {
         max-height: calc(100vh - 170px); /* Ajusta la altura máxima según tu diseño */
-        overflow-y: auto;
+        overflow-y: auto; /* Añade el desplazamiento vertical */
+        overflow-x: hidden; /* Oculta el desplazamiento horizontal */
     }
 
     .table th,
