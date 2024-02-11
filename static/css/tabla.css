@@ -1,42 +1,20 @@
-/* Ajustes adicionales para dispositivos pequeños */
-@media only screen and (max-width: 576px) {
-    .table-responsive {
-        display: block;
-        overflow-x: auto;
-        overflow-y: hidden; /* Oculta el desplazamiento vertical */
-    }
+.table-container {
+    overflow-x: auto;
+}
 
-    .table {
-        width: auto; /* Cambiar de 100% a auto */
-        margin-bottom: 15px; /* Ajustar según tus necesidades */
-        border-spacing: 0;
-        border-collapse: collapse; /* Añadir para evitar espacios entre celdas */
-    }
+.table-content {
+    max-height: 400px;
+    /* Establece una altura máxima para el cuerpo de la tabla */
+    overflow-y: auto;
+    /* Permite desplazamiento vertical en el cuerpo de la tabla */
+}
 
-    .table thead,
-    .table tbody,
-    .table th,
-    .table td,
-    .table tr {
-        display: table-cell; /* Cambiar de block a table-cell */
-        vertical-align: middle; /* Ajustar según tus necesidades */
-    }
-
-    .table thead {
-        font-weight: bold; /* Añadir negrita para encabezados */
-        background-color: #f2f2f252; /* Color de fondo para encabezados */
-    }
-
-    .table tbody {
-        max-height: calc(100vh - 170px); /* Ajusta la altura máxima según tu diseño */
-        overflow-y: auto; /* Añade el desplazamiento vertical */
-        overflow-x: hidden; /* Oculta el desplazamiento horizontal */
-    }
-
-    .table th,
-    .table td {
-        padding: 8px;
-        border: 1px solid #ddd; /* Añadir borde a celdas */
-        border-top: none; /* Eliminar borde superior */
-    }
+.table thead th {
+    position: sticky;
+    top: 0;
+    /* Fija la cabecera en la parte superior de la tabla */
+    background-color: white;
+    /* Añade un fondo blanco para evitar que la cabecera sea transparente */
+    z-index: 1;
+    /* Asegura que la cabecera esté por encima del contenido de la tabla */
 }
