@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for, session
 from flask_mysqldb import MySQL
-
+import requests
 
 
 app = Flask(__name__)
@@ -491,6 +491,31 @@ def obtener_plagas():
     return jsonify(plagas)
 
 
+
+##########################################################################
+
+@app.route('/Plantas')
+def Plantas():
+    # Hacer la solicitud a la API
+    url = "https://hikuri-cfcb505eb388.herokuapp.com/plantas"
+    response = requests.get(url)
+    data = response.json()
+    
+    # Imprimir los datos recibidos en la consola
+    print("Datos recibidos de la API:", data)
+    
+    # Procesar los datos y crear una lista de diccionarios
+    lista_plantas = []
+    for planta in data['plantas']:
+        planta_info = {
+            'nombre_cientifico': planta['nombre_cientifico'],
+            'nombre_comun': planta['nombre_comun'],
+            'propiedades': planta['propiedades'],
+            'region': planta['region']
+        }
+        lista_plantas.append(planta_info)
+
+    return render_template('plantas.html', plantas=lista_plantas)
 
 ##########################################################################
 
