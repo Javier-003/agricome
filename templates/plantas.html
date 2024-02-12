@@ -18,6 +18,23 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-cloud"></i>
+                <!-- Icono de nube -->
+            </a>
+
+            <div class="ml-auto mr-3">
+                <a href="{{ url_for('logout') }}" style=" text-decoration:none" class="text-dark">Cerrar Sesión</a>
+                <a href="{{ url_for('Administrador') }}" style=" text-decoration:none; padding: 25px;" class="text-dark">Inicio</a>
+            </div>
+
+        </div>
+    </nav>
+
+    
     <div class="container">
         <h1 class="mt-5">Tabla de Plantas</h1>
         <table class="table mt-4">
